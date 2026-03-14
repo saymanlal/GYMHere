@@ -1,0 +1,15 @@
+# GitGuardian configuration
+# This file tells GitGuardian to ignore certain paths or patterns
+
+version: 2
+
+paths-ignore:
+  - "**/.env.example"      # Ignore example environment files
+  - "**/README.md"         # Ignore README documentation
+  - "**/docs/**"           # Ignore documentation folder
+  - "**/GETTING_STARTED.md"
+
+# Ignore specific secret types in example files
+matches-ignore:
+  - name: "Example credentials in template files"
+    match: "your-email@example.com|REPLACE_WITH_YOUR_APP_PASSWORD|your-app-password"
